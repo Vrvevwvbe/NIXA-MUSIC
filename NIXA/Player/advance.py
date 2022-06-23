@@ -12,17 +12,17 @@ from telethon.tl.custom import button
 from time import time
 from datetime import datetime
 hl = '/'
-deadlyversion = 'sᴘᴀᴍʙᴏᴛ 2.0'
+deadlyversion = 'sᴘᴀᴍʙᴏᴛ0.10'
 
-NIXA_PIC = "https://te.legra.ph/file/084c206996897e2d42443.jpg"
+NIXA_PIC = "https://te.legra.ph/file/458d42a851b8ec54f865d.jpg"
   
 
-DEADLY = "    ᴍᴜsɪᴄ sᴘᴀᴍ ʙᴏᴛ\n\n"
-DEADLY += f"━━━━━━━━━━━━━━━━━━━\n"
-DEADLY += f" ‣ **ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ** : `3.10.1`\n"
-DEADLY += f" ‣ **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ** : `{version.__version__}`\n"
-DEADLY += f" ‣ **vᴇʀsɪᴏɴ**  : `{deadlyversion}`\n"
-DEADLY += f"━━━━━━━━━━━━━━━━━━━\n\n"   
+DEADLY = " ᴍᴜsɪᴄ+ʀᴀɪᴅ sᴘᴀᴍ ʙᴏᴛ\n\n"
+DEADLY += f"═══════════════════\n"
+DEADLY += f"• **ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ** : `3.10.1`\n"
+DEADLY += f"• **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ** : `{version.__version__}`\n"
+DEADLY += f"• **vᴇʀsɪᴏɴ**  : `{deadlyversion}`\n"
+DEADLY += f"═══════════════════\n\n"   
 
                                   
 @BOT.on(events.NewMessage(incoming=True, pattern=r"\%salive(?: |$)(.*)" % hl))
@@ -32,11 +32,11 @@ async def alive(event):
                                   caption=DEADLY,
                                   buttons=[
         [
-        Button.url("ᴄʜᴀɴɴᴇʟ", "https://t.me/TechQuard"),
-        Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/TechQuardSupport")
+        Button.url("مطور السورس", "https://t.me/QABNADLIB"),
+        Button.url("قناة السورس", "https://t.me/VFF35")
         ],
         [
-        Button.url("ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ", "https://youtube.com/channel/UCtI7hbY-BD7wvuIzoSU0cEw")
+        Button.url("قروب الدعم", "https://t.me/faqek")
         ]
         ]
         )
