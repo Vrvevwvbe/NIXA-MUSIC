@@ -12,23 +12,23 @@ from NIXA.main import bot as Client
 START_TIME = datetime.utcnow()
 START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
 TIME_DURATION_UNITS = (
-    ( week , 60 * 60 * 24 * 7),
-    ( day , 60 * 60 * 24),
-    ( hour , 60 * 60),
-    ( min , 60),
-    ( sec , 1)
+    ('week', 60 * 60 * 24 * 7),
+    ('day', 60 * 60 * 24),
+    ('hour', 60 * 60),
+    ('min', 60),
+    ('sec', 1)
 )
 
 async def _human_time_duration(seconds):
     if seconds == 0:
-        return  inf 
+        return 'inf'
     parts = []
     for unit, div in TIME_DURATION_UNITS:
         amount, seconds = divmod(int(seconds), div)
         if amount > 0:
-            parts.append( {} {}{} 
+            parts.append('{} {}{}'
                          .format(amount, unit, "" if amount == 1 else "s"))
-    return  ,  .join(parts)
+    return ', '.join(parts)
     
    
 
@@ -36,31 +36,31 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_photo(
         photo=f"{START_PIC}",
-        caption=f"""**اهلآ بك 
-في اقوا بوت متطور مميزاته مامطروقه.
-لتشغيل الاغاني في المكالمات الصوتيه..
+        caption=f"""**هلا عيوني 
+انا اقوا 🥇 بوت متطور مميزات متعددة.
+لتشغيل الاغاني في المكالمات الصوتية..
 **""",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ ❰ اضفني الى مجموعتك ❱ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"
+                        "☬ اضفني الى مجموعتك ☬", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "الاوامر الاساسيه", url=f"https://telegra.ph/%D8%B3%D9%88%D8%B1%D8%B3-%D9%83%D9%88%D8%A8%D8%B1%D8%A7-%D8%A7%D9%84%D8%A7%D9%81%D8%B6%D9%84-06-23"
+                        "👷‍♂ اوامر التشغيل 👷‍♂", url=f"https://telegra.ph/%D8%B3%D9%88%D8%B1%D8%B3-%D9%83%D9%88%D8%A8%D8%B1%D8%A7-%D8%A7%D9%84%D8%A7%D9%81%D8%B6%D9%84-06-23"
                     ),
                     InlineKeyboardButton(
-                        "", url="https://t.me/QABNADLIB"
+                        "", url="https://t.me/Simple_Mundaa"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "قناة السورس", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "🌐 قناة المطور 🌐", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                     InlineKeyboardButton(
-                        "كروب المساعدة", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "🥇 كروب المساعدة 🥇", url=f"https://t.me/{GROUP_SUPPORT}"
                     )
                 ]
                 
@@ -73,12 +73,12 @@ async def start_(client: Client, message: Message):
 async def start(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://te.legra.ph/file/bf9f444677e4d565542a6.jpg",
-        caption=f"""اهلا بك انا اقوا بوت في التليكرام لتشغيل الاغاني.""",
+        caption=f"""هلا عمري انا اقوا بوت في التليكرام.""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Source Cobra", url=f"https://t.me/VFF35")
+                        "🥇 قناة السورس 🥇", url=f"https://t.me/VFF35")
                 ]
             ]
         ),
@@ -89,12 +89,12 @@ async def start(client: Client, message: Message):
 async def help(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://te.legra.ph/file/187646e964cd12329f1de.jpg",
-        caption=f"""هلاو عمري يمكنك تنصيب بوت خاص بك تواصل مع المطور""",
+        caption=f"""لتنصيب بوت راسل مطور السورس""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "𝐒𝐈𝐅 𝐂𝐎𝐁𝐑𝐀", url=f"https://t.me/QABNADLIB")
+                        "𝐒𝐈𝐅 𝐂𝐎𝐁𝐑𝐀️", url=f"https://t.me/QABNADLIB")
                 ]
             ]
         ),
