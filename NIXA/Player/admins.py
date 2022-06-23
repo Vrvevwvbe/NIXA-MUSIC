@@ -104,7 +104,7 @@ async def stop(client, m: Message):
         except Exception as e:
             await m.reply(f"🚫 **ᴇʀʀᴏʀ:**\n\n`{e}`")
     else:
-        await m.reply("❌ **ɴᴏᴛʜɪɴɢ ɪs sᴛʀᴇᴀᴍɪɴɢ**")
+        await m.reply("❌ **ماني مشتغل**")
 
 
 @Client.on_message(
@@ -153,7 +153,7 @@ async def mute(client, m: Message):
         try:
             await call_py.mute_stream(chat_id)
             await m.reply(
-                "🔇 **طلب المعلم.**\n\n• **تم خروسي, لرفع كتمي اكتب**\n» /استمرار."
+                "🔇 **طلب المعلم.**\n\n• **تم خروسي, لرفع كتمي اكتب**\n» /سولف."
             )
         except Exception as e:
             await m.reply(f"🚫 **ᴇʀʀᴏʀ:**\n\n`{e}`")

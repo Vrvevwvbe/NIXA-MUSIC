@@ -9,7 +9,7 @@ from pyrogram.errors import UserAlreadyParticipant
 
 
 @Client.on_message(
-    command(["انضم", f"userbotjoin@{BOT_USERNAME}"]) & ~filters.private & ~filters.bot
+    command(["ادخل", f"انضم"]) & ~filters.private & ~filters.bot
 )
 @authorized_users_only
 @errors
@@ -44,12 +44,12 @@ async def join_group(client, message):
     )
 
 
-@Client.on_message(command(["userbotleave",
+@Client.on_message(command(["غادر",
                             f"leave@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
 @authorized_users_only
 async def leave_one(client, message):
     try:
-        await USER.send_message(message.chat.id, "✅ ᴜsᴇʀʙᴏᴛ sᴜᴄᴄᴇssғᴜʟʟʏ ʟᴇғᴛ ᴄʜᴀᴛ")
+        await USER.send_message(message.chat.id, "✅ طلب المعلم تم مغادرتي")
         await USER.leave_chat(message.chat.id)
     except BaseException:
         await message.reply_text(
